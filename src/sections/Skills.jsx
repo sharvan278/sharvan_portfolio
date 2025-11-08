@@ -2,15 +2,16 @@
 export default function Skills() {
   return (
     <section id="skills" className="py-20">
-      <div className="mb-16 text-center">
-        <h2 className="text-5xl font-bold text-white mb-4" style={{fontFamily: 'Pacifico, cursive'}}>
-          Technical Skills
-        </h2>
-      </div>
+      <div className="w-full">
+        <div className="mb-16 text-center">
+          <h2 className="text-5xl font-bold text-white mb-4" style={{fontFamily: 'Pacifico, cursive'}}>
+            Technical Skills
+          </h2>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-3 max-w-7xl mx-auto px-4" style={{ gap: '2rem' }}>
         {/* Programming Languages Box */}
-        <div className="bg-[#2A3B5C] rounded-xl p-6">
+        <div className="bg-[#2A3B5C] rounded-xl p-6" style={{ border: '2px solid rgba(255, 255, 255, 0.6)' }}>
           <h3 className="text-lg font-bold text-white mb-4 text-center pb-3 border-b border-white/20">
             Programming Languages
           </h3>
@@ -47,7 +48,7 @@ export default function Skills() {
         </div>
 
         {/* Frameworks Box */}
-        <div className="bg-[#2A3B5C] rounded-xl p-6">
+        <div className="bg-[#2A3B5C] rounded-xl p-6" style={{ border: '2px solid rgba(255, 255, 255, 0.6)' }}>
           <h3 className="text-lg font-bold text-white mb-4 text-center pb-3 border-b border-white/20">
             Frameworks
           </h3>
@@ -84,7 +85,7 @@ export default function Skills() {
         </div>
 
         {/* Tools Box */}
-        <div className="bg-[#2A3B5C] rounded-xl p-6">
+        <div className="bg-[#2A3B5C] rounded-xl p-6" style={{ border: '2px solid rgba(255, 255, 255, 0.6)' }}>
           <h3 className="text-lg font-bold text-white mb-4 text-center pb-3 border-b border-white/20">
             Tools
           </h3>
@@ -119,6 +120,7 @@ export default function Skills() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

@@ -3,7 +3,6 @@ import Navbar from "./components/Navbar";
 import Home from "./sections/Home";
 import Skills from "./sections/Skills";
 import Experience from "./sections/Experience";
-import ClubActivities from "./sections/ClubActivities";
 import Projects from "./sections/Projects";
 import Achievements from "./sections/Achievements";
 
@@ -48,7 +47,6 @@ export default function App() {
             <Home />
             <Skills />
             <Experience />
-            <ClubActivities />
             <Projects />
             <Achievements />
           </div>

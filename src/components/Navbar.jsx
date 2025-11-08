@@ -5,7 +5,6 @@ export default function Navbar({ active }) {
     { id: "home", label: "Talk To Me", icon: "✉" },
     { id: "skills", label: "Skills", icon: "<>" },
     { id: "experience", label: "Experience", icon: "💼" },
-    { id: "club-activities", label: "Club Activities", icon: "🎓" },
     { id: "projects", label: "Projects", icon: "📁" },
     { id: "achievements", label: "Achievements", icon: "🏆" },
   ];
