@@ -12,23 +12,29 @@ export default function Projects() {
           <div className="project-image scroll-image">
             <img 
               src="/images/projects/grocera-thumb.jpg" 
-              alt="AVAX50 Project"
+              alt="Grocera – AI Grocery Planner"
             />
           </div>
 
           <div className="project-content">
             <div className="project-header">
-              <div className="tech-badge green">N</div>
-              <div className="tech-badge blue">TS</div>
-              <h3 className="project-name">AVAX50</h3>
+              <div className="tech-badge green">
+                <i className="devicon-python-plain" style={{ fontSize: '18px' }}></i>
+              </div>
+              <div className="tech-badge blue">
+                <span style={{ fontSize: '18px' }}>🧠</span>
+              </div>
+              <div className="tech-badge cyan">ST</div>
+              <h3 className="project-name">Grocera — AI Grocery Planner</h3>
             </div>
 
-            <p className="project-description">
-              This project bridges that gap by creating a crypto token basket, similar to how 
-              Nifty Fifty works for stocks, but powered by the Avalanche (AVAX) blockchain. 
-              The goal is to provide a safe and accessible entry point into the world of 
-              crypto for individuals who are curious but uncertain.
-            </p>
+            <div className="project-description">
+              <ul className="list-disc ml-6 space-y-1">
+                <li>Engineered ML-powered grocery optimization system reducing waste by <strong>27%</strong> using demand forecasting and smart alerts.</li>
+                <li>Trained Random Forest &amp; XGBoost models achieving <strong>92%</strong> forecasting accuracy with feature engineering and hyperparameter tuning.</li>
+                <li>Built interactive Streamlit UI enabling real-time tracking, charts, and purchase insights for 100+ user simulations.</li>
+              </ul>
+            </div>
 
             <div className="project-buttons">
               <a
@@ -37,7 +43,7 @@ export default function Projects() {
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                🔗 View Project
+                🔗 View App
               </a>
               <a
                 href="https://github.com/sharvan278/GROCERA"
@@ -45,7 +51,8 @@ export default function Projects() {
                 rel="noopener noreferrer"
                 className="btn-secondary"
               >
-                📱
+                <i className="devicon-github-original" style={{ fontSize: '18px', marginRight: '8px' }}></i>
+                Source Code
               </a>
             </div>
           </div>
@@ -55,22 +62,27 @@ export default function Projects() {
       <div className="minor-projects-container">
         <div className="minor-grid">
 
-          {/* Project 1 - AVAX50 */}
+          {/* Project 1 - StayEase */}
           <div className="minor-card">
             <div className="minor-top">
               <img
-                src="/images/projects/avax50-thumb.png"
-                alt="AVAX50"
+                src="/images/projects/stayease-thumb.png"
+                alt="StayEase"
                 className="minor-image"
               />
               <div className="minor-details">
-                <h4 className="minor-title">AVAX50</h4>
+                <h4 className="minor-title">StayEase — Full-Stack Property Booking Platform</h4>
                 <div className="tech-list">
-                  <div className="tech-badge green small">N</div>
-                  <div className="tech-badge blue small">TS</div>
+                  <div className="tech-badge green small">
+                    <i className="devicon-mongodb-plain"></i>
+                  </div>
+                  <div className="tech-badge gray small">EX</div>
+                  <div className="tech-badge cyan small">⚛️</div>
+                  <div className="tech-badge green small">�</div>
                 </div>
                 <p className="minor-desc">
-                  Crypto token basket built on AVAX blockchain, similar to how NIFTY50 works for stocks.
+                  • Developed scalable Airbnb-style platform supporting <strong>250+ listings</strong> with secure logins, maps, and reviews.<br/>
+                  • Improved backend throughput by <strong>35%</strong> via optimized API queries, caching, and load-aware DB structure.
                 </p>
                 <div className="minor-buttons">
                   <a href="#" className="btn-small-primary">View</a>

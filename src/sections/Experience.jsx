@@ -14,17 +14,21 @@ export default function Experience() {
 
             <div className="company-details">
               <h3>Model N</h3>
+              <p><strong>Life Sciences &amp; Product Dev Intern</strong></p>
               <p>Hyderabad, India</p>
-              <p>July 2025 – December 2025</p>
+              <p>Jul 2025 – Dec 2025</p>
               <ul>
                 <li>
-                  → Automated the Transfer of Information (TOI) content creation process by leveraging
-                  work-record data and code change details specific to each product/service and release version.
+                  Automated CPI-U and T-Bill update pipelines using Python and AWS S3, improving Medicaid URA data
+                  refresh performance and reliability.
                 </li>
                 <li>
-                  → Implemented a multi-agent workflow that simultaneously auto-generates 14 structured
-                  content sections, with a scalable architecture supporting seamless integration of
-                  new content sections.
+                  Built a GenAI Medicaid intelligence engine with LangGraph + AWS Bedrock achieving <strong>95% SQL accuracy</strong>,
+                  <strong>+68% parsing reliability</strong>, and <strong>43.5% workflow complexity reduction</strong> across 50+ Oracle tables &amp; 200+ NDC drug entities.
+                </li>
+                <li>
+                  Architected FastAPI microservices (async I/O, caching, schema-aware SQL, audit logging) powering multi-million-dollar
+                  URA validation workflows under HITL governance.
                 </li>
               </ul>
             </div>
@@ -37,34 +41,29 @@ export default function Experience() {
           </div>
         </div>
 
-        {/* -------- VedaVerse Experience (Your New Section) -------- */}
+        {/* -------- Innomatics Research Labs Experience -------- */}
         <div className="experience-card">
           <div className="experience-header">
             <div className="company-logo">
-              <img src="/images/vedaverse-logo.png" alt="VedaVerse logo" />
+              <img src="/images/experience/innomatics-1.jpg" alt="Innomatics Research Labs logo" />
             </div>
 
             <div className="company-details">
-              <h3>VedaVerse</h3>
-              <p>Remote</p>
-              <p>July 2024 – October 2025</p>
+              <h3>Innomatics Research Labs</h3>
+              <p><strong>Full Stack Developer Intern</strong></p>
+              <p>Hyderabad, India</p>
+              <p>Jan 2025 – Mar 2025</p>
               <ul>
                 <li>
-                  → Built an SEO-optimized website using NextJS and a mobile application using
-                  React Native for the startup.
+                  Developed full-stack billing and booking systems using MERN with secure authentication and
+                  role-based access control.
                 </li>
                 <li>
-                  → Spearheaded the design of their open-source project <strong>"Chatsphere"</strong>,
-                  enabling users to chat with multiple LLMs while sharing the same context without
-                  switching chats.
+                  Optimized backend API &amp; database performance achieving <strong>30% faster response time</strong> and improved
+                  system scalability.
                 </li>
               </ul>
             </div>
-          </div>
-
-          <div className="experience-images vedaverse-images">
-            <img src="/images/experience/vedaverse-chatsphere.png" alt="Chatsphere UI" />
-            <img src="/images/experience/vedaverse-hackathon.png" alt="Hackathon poster" />
           </div>
         </div>
 

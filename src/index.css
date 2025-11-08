@@ -1847,6 +1847,179 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.85rem;
 }
 
+/* ===========================
+   Minor Projects Section
+=========================== */
+
+.minor-projects-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  padding: 0 1rem;
+}
+
+.minor-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Card Styling */
+.minor-card {
+  background: rgba(0, 51, 102, 0.38);
+  border: 2px solid rgba(11, 158, 255, 0.4);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.minor-card:hover {
+  border-color: rgba(0, 212, 255, 0.8);
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.45);
+}
+
+/* Layout inside card */
+.minor-top {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+/* Thumbnail Image */
+.minor-image {
+  width: 240px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.15);
+  flex-shrink: 0;
+}
+
+/* Text section */
+.minor-details {
+  flex: 1;
+}
+
+/* Title */
+.minor-title {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+/* Description */
+.minor-desc {
+  font-size: 16px;
+  color: #e8f2ff;
+  line-height: 1.6;
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+
+/* Tech badge layout */
+.tech-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.tech-badge {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+/* Badge Colors */
+.tech-badge.green { background: #00b36b; }
+.tech-badge.blue { background: #338bff; }
+.tech-badge.cyan { background: #1cb5e0; }
+.tech-badge.cyan-light { background: #4dd0ff; }
+.tech-badge.gray { background: #7c7c7c; }
+.tech-badge.white { background: #ffffff; color: black; }
+
+/* Buttons */
+.minor-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.btn-small-primary {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #000;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.25s;
+  text-decoration: none;
+}
+
+.btn-small-primary:hover {
+  background: #e6e6e6;
+  transform: translateY(-1px);
+}
+
+.btn-small-secondary {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #122b49;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  border: 1px solid rgba(255,255,255,0.4);
+  transition: 0.25s;
+  text-decoration: none;
+}
+
+.btn-small-secondary:hover {
+  background: #1a3558;
+  transform: translateY(-1px);
+}
+
+/* "More Coming Soon" card */
+.minor-card.center {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.coming-soon {
+  padding: 40px;
+  opacity: 0.85;
+}
+
+.plus-icon {
+  font-size: 40px;
+  color: #afbcff;
+  margin-bottom: 10px;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 900px) {
+  .minor-top {
+    flex-direction: column;
+  }
+  .minor-image {
+    width: 100%;
+    height: 160px;
+  }
+}
+
 /* ===== Sidebar Layout ===== */
 .sidebar {
   position: fixed;
@@ -1860,6 +2033,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   padding: 2rem 1.2rem;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
   border-right: 1px solid rgba(255, 255, 255, 0.15);
@@ -1956,4 +2130,87 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
+}
+
+/* Size images and font icons inside skill-icon boxes */
+.skill-icon i {
+  font-size: 28px;
+  line-height: 1;
+}
+.skill-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Footer bar styles (redesigned for visibility and accessibility) */
+.site-footer-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1100;
+  background: linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.85));
+  border-top: 1px solid rgba(255,255,255,0.04);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  padding: 0.5rem 1rem;
+}
+
+.site-footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.footer-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.03);
+  color: #ffffff;
+  transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.footer-btn svg { color: #fff; }
+
+.footer-btn:hover,
+.footer-btn:focus {
+  transform: translateY(-3px);
+  background: linear-gradient(180deg, #0ea5a9, #2563eb);
+  color: white;
+  box-shadow: 0 6px 18px rgba(6,182,212,0.18);
+  outline: none;
+}
+
+.footer-copy {
+  color: rgba(255,255,255,0.78);
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  .site-footer-inner { padding: 0 8px; }
+  .footer-copy { display: none; }
+  .footer-btn { width: 40px; height: 40px; border-radius: 8px; }
+}
+
+/* Reserve space so page content is not obscured by the fixed footer */
+body::after {
+  content: '';
+  display: block;
+  height: 64px;
 }
