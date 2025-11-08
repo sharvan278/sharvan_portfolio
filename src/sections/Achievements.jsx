@@ -23,32 +23,22 @@ export default function Achievements() {
   ];
 
   return (
-    <section id="achievements" className="py-20">
-      <div className="mb-16 text-center">
-        <h2 className="text-5xl font-bold text-white mb-4" style={{fontFamily: 'Pacifico, cursive'}}>
-          Achievements
-        </h2>
-      </div>
+    <section id="achievements">
+      <h2>Achievements</h2>
 
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 gap-6">
-          {achievements.map((achievement, index) => (
-            <div 
-              key={index} 
-              className="bg-[#3A4B7B] rounded-xl p-6"
-            >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">🏆</span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-white mb-2">{achievement.title}</h3>
-                  <p className="text-white text-sm leading-relaxed">{achievement.description}</p>
-                </div>
+      <div className="achievements-grid">
+        {achievements.map((achievement, index) => (
+          <div key={index} className="achievement-card">
+            <div className="flex items-start gap-4">
+              <div className="achievement-icon">🏆</div>
+
+              <div>
+                <h3 className="achievement-title">{achievement.title}</h3>
+                <p className="achievement-desc">{achievement.description}</p>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
