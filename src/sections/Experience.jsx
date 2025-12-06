@@ -9,7 +9,7 @@ export default function Experience() {
         <div className="experience-card">
           <div className="experience-header">
             <div className="company-logo">
-              <img src="/images/modeln-logo.png" alt="Model N" />
+              <img src="/images/modeln-logo.jpeg" alt="Model N" />
             </div>
 
             <div className="company-details">

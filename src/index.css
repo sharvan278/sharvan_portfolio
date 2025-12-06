@@ -1634,6 +1634,9 @@ h1, h2, h3, h4, h5, h6 {
   overflow-x: hidden;
   border-radius: 10px;
   scroll-behavior: smooth;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-image.scroll-image img {
@@ -1641,6 +1644,13 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   object-fit: contain;
   min-height: 100%;
+}
+
+.project-image.scroll-image video {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+  max-height: 450px;
 }
 
 /* Hide scrollbar while keeping scroll functionality */
@@ -1680,15 +1690,22 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3rem;
+  height: 3rem;
   font-weight: 700;
   color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tech-badge:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .tech-badge.small {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2.25rem;
+  height: 2.25rem;
   font-size: 0.7rem;
 }
 
@@ -1947,6 +1964,9 @@ h1, h2, h3, h4, h5, h6 {
 .tech-badge.cyan { background: #1cb5e0; }
 .tech-badge.cyan-light { background: #4dd0ff; }
 .tech-badge.gray { background: #7c7c7c; }
+.tech-badge.orange { background: #f97316; }
+.tech-badge.yellow { background: #eab308; }
+.tech-badge.purple { background: #a855f7; }
 .tech-badge.white { background: #ffffff; color: black; }
 
 /* Buttons */
