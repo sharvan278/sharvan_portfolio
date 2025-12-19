@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Navbar({ active }) {
+export default function Navbar({ active, onLinkClick, isOpen }) {
   const links = [
     { id: "home", label: "Talk To Me", icon: "✉" },
     { id: "skills", label: "Skills", icon: "<>" },
@@ -14,8 +14,14 @@ export default function Navbar({ active }) {
     return active === linkId;
   };
 
+  const handleLinkClick = () => {
+    if (onLinkClick) {
+      onLinkClick();
+    }
+  };
+
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${isOpen ? 'mobile-open' : ''}`}>
       <h1 className="sidebar-title">Dev Portfolio</h1>
 
       <img
@@ -30,6 +36,7 @@ export default function Navbar({ active }) {
             key={link.id}
             href={`#${link.id}`}
             className={`nav-link ${getActiveClass(link.id) ? "active" : ""}`}
+            onClick={handleLinkClick}
           >
             <span className="icon">{link.icon}</span>
             <span className="label">{link.label}</span>

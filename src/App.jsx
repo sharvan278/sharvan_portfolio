@@ -8,6 +8,7 @@ import Achievements from "./sections/Achievements";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("home");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +26,14 @@ export default function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
     <div className="min-h-screen relative" style={{background: '#1A2B4C'}}>
       {/* Starry background effect */}
@@ -33,13 +42,28 @@ export default function App() {
         backgroundSize: '50px 50px',
         backgroundPosition: '0 0'
       }}></div>
+
+      {/* Mobile Header - Only visible on mobile */}
+      <div className="mobile-header md:hidden">
+        <button className="mobile-menu-btn" onClick={toggleMobileMenu} aria-label="Toggle menu">
+          {mobileMenuOpen ? '✕' : '☰'}
+        </button>
+        <div className="mobile-title">Dev Portfolio</div>
+        <div style={{width: '44px'}}></div> {/* Spacer for centering */}
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      {mobileMenuOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-[9000] md:hidden"
+          onClick={closeMobileMenu}
+        ></div>
+      )}
       
       {/* Container for proper separation */}
       <div className="flex min-h-screen relative z-10">
         {/* LEFT FIXED NAVIGATION - Separate Container */}
-        <div className="fixed left-0 top-0 bottom-0 z-30" style={{width: '280px'}}>
-          <Navbar active={activeSection} />
-        </div>
+        <Navbar active={activeSection} onLinkClick={closeMobileMenu} isOpen={mobileMenuOpen} />
 
         {/* RIGHT CONTENT AREA - Separate Container with clear boundary */}
         <main className="flex-1 min-h-screen relative z-10" style={{marginLeft: '280px', minWidth: 'calc(100% - 280px)'}}>
