@@ -97,8 +97,8 @@ export default function Projects() {
                   • Improved backend throughput by <strong>35%</strong> via optimized API queries, caching, and load-aware DB structure.
                 </p>
                 <div className="minor-buttons">
-                  <a href="#" className="btn-small-primary">View</a>
-                  <a href="#" className="btn-small-secondary">Code</a>
+                  <a href="https://github.com/sharvan278/Major_Project" target="_blank" rel="noopener noreferrer" className="btn-small-primary">View</a>
+                  <a href="https://github.com/sharvan278/Major_Project" target="_blank" rel="noopener noreferrer" className="btn-small-secondary">Code</a>
                 </div>
               </div>
             </div>
